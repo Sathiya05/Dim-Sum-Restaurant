@@ -1,0 +1,22 @@
+{
+  "name": "golden-steam-dim-sum",
+  "version": "1.0.0",
+  "description": "Golden Steam Dim Sum House - premium multi-page restaurant website (HTML5, Tailwind CSS, Vanilla JS)",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -i ./css/input.css -o ./css/style.css --minify",
+    "dev": "tailwindcss -i ./css/input.css -o ./css/style.css --watch",
+    "start": "tailwindcss -i ./css/input.css -o ./css/style.css --watch",
+    "serve": "npx --yes serve . -l 4173"
+  },
+  "keywords": [
+    "dim-sum",
+    "restaurant",
+    "tailwindcss",
+    "frontend"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

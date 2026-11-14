@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weekend Brunch | Golden Steam Dim Sum House</title>
+  <meta name="description" content="Make your weekends a little more delicious — a relaxed dim sum brunch filled with warm baskets, traditional flavours and memorable moments." />
+  <meta name="theme-color" content="#FFFCF7" />
+  <link rel="icon" href="images/logo/golden-steam-logo.svg" type="image/svg+xml" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("gs-theme");
+        var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (dark) document.documentElement.classList.add("dark");
+        if (localStorage.getItem("gs-rtl") === "rtl") document.documentElement.dir = "rtl";
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="flex min-h-screen flex-col">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <div id="navbar"></div>
+
+  <main id="main" class="flex-1">
+
+    <!-- ============================== SECTION 1 — HERO ============================== -->
+    <section class="hero-banner relative isolate flex overflow-hidden" aria-labelledby="brunch-title">
+      <img src="images/brunch/brunch-spread.jpg" fetchpriority="high"
+           alt="Generous dim sum brunch spread laid out across a table"
+           width="1600" height="1200" class="absolute inset-0 -z-10 h-full w-full object-cover" />
+      <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#211815]/55 via-[#211815]/35 to-[#211815]/65" aria-hidden="true"></div>
+
+      <div class="container-site py-20">
+        <div class="mx-auto max-w-3xl text-center reveal">
+          <span class="hero-badge bg-[#FFFCF7]/90">
+            <span class="chinese-deco text-sm" aria-hidden="true">週末</span>
+            Weekend Brunch
+          </span>
+
+          <h1 id="brunch-title" class="hero-copy-shadow mt-6 font-display text-[2.4rem] leading-[1.07] text-cream sm:text-5xl lg:text-[3.6rem]">
+            Make Your Weekends a Little More Delicious.
+          </h1>
+
+          <p class="hero-copy-shadow mx-auto mt-5 max-w-2xl text-base leading-relaxed text-cream/90 sm:text-lg">
+            Bring your favorite people together for a relaxing dim sum brunch filled with warm baskets,
+            traditional flavors, and memorable moments.
+          </p>
+
+          <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <a href="#brunch-favorites" class="btn-gold">
+              Explore Brunch Menu
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+            </a>
+            <a href="contact.html?dining=weekend-brunch#reservation" data-brunch-cta
+               class="btn border border-cream/50 text-cream hover:bg-cream hover:text-primary">
+              Reserve Your Brunch Table
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== SECTION 2 — THE WEEKEND EXPERIENCE ====================== -->
+    <section class="section bg-surface" aria-labelledby="weekend-experience-title">
+      <div class="container-site grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="reveal">
+          <p class="eyebrow">The Weekend Experience</p>
+          <h2 id="weekend-experience-title" class="section-title mt-4">Brunch Without the Rush</h2>
+          <p class="mt-5 leading-relaxed text-muted">
+            Weekend brunch is the gentlest way to enjoy dim sum: the pace is slower, the table is bigger,
+            and there is always room for one more basket. Order a few favourites, pour the tea, and let the
+            morning stretch out.
+          </p>
+          <p class="mt-4 leading-relaxed text-muted">
+            It works just as well for a family lunch as it does for a long catch-up with friends —
+            everyone orders what they like, dishes travel around the table, and the steamer keeps arriving.
+          </p>
+
+          <ul class="mt-7 grid gap-3 sm:grid-cols-2">
+            <li class="chip-note">Relaxed weekend dining</li>
+            <li class="chip-note">Shared dim sum baskets</li>
+            <li class="chip-note">Family &amp; friends gatherings</li>
+            <li class="chip-note">Freshly prepared dishes</li>
+            <li class="chip-note sm:col-span-2">Warm hospitality at an unhurried pace</li>
+          </ul>
+        </div>
+
+        <div class="relative reveal" data-reveal-delay="100">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="img-frame col-span-2 aspect-[16/10] shadow-soft">
+              <img src="images/brunch/tea-and-dim-sum.jpg" loading="lazy"
+                   alt="Traditional tea served alongside baskets of dim sum"
+                   width="1200" height="750" class="media-cover" />
+            </div>
+            <div class="img-frame aspect-[4/3] shadow-soft">
+              <img src="images/brunch/friends-brunch.jpg" loading="lazy"
+                   alt="Friends enjoying a relaxed brunch together"
+                   width="800" height="600" class="media-cover" />
+            </div>
+            <div class="img-frame aspect-[4/3] shadow-soft">
+              <img src="images/brunch/family-sharing-meal.jpg" loading="lazy"
+                   alt="Family sharing a meal around the table"
+                   width="800" height="600" class="media-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== SECTION 3 — BRUNCH FAVORITES ====================== -->
+    <section id="brunch-favorites" class="section scroll-mt-32 bg-page" aria-labelledby="brunch-favorites-title">
+      <div class="container-site">
+        <div class="section-head is-centered reveal">
+          <p class="eyebrow is-centered">Brunch Favorites</p>
+          <h2 id="brunch-favorites-title" class="section-title mt-4">What Weekends Are Made Of</h2>
+          <p class="section-lead">
+            Six easy favourites to build a weekend table around — sweet, savoury, steamed and crisp.
+          </p>
+          <p class="mt-3 text-xs text-muted">
+            Prices shown are <strong>editable sample prices</strong> — update them in
+            <code class="text-primary">js/brunch.js</code>.
+          </p>
+        </div>
+
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-brunch-grid>
+          <p class="text-sm text-muted">Loading brunch favourites…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== SECTION 4 — BRUNCH COMBINATIONS ====================== -->
+    <section class="section-tint section" aria-labelledby="brunch-packages-title">
+      <div class="container-site">
+        <div class="section-head is-centered reveal">
+          <p class="eyebrow is-centered">Brunch Combinations</p>
+          <h2 id="brunch-packages-title" class="section-title mt-4">Ready-Made Ways to Order</h2>
+          <p class="section-lead">
+            Sample packages for one, two or the whole table — edit the contents and prices in
+            <code class="text-primary">js/brunch.js</code>.
+          </p>
+        </div>
+
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4" data-brunch-packages>
+          <p class="text-sm text-muted">Loading brunch packages…</p>
+        </div>
+
+        <p class="mx-auto mt-8 max-w-3xl border-s-2 border-gold/70 ps-4 text-start text-xs leading-relaxed text-muted">
+          Packages shown here are sample combinations with placeholder pricing. Nothing on this page should
+          be read as an unlimited, all-you-can-eat or discounted offer unless the restaurant confirms it
+          directly.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====================== SECTION 5 — BRUNCH DETAILS & FAQ ====================== -->
+    <section class="section bg-surface" aria-labelledby="brunch-details-title">
+      <div class="container-site grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="reveal">
+          <p class="eyebrow">Good to Know</p>
+          <h2 id="brunch-details-title" class="section-title mt-4">Brunch Details</h2>
+          <p class="mt-4 text-sm leading-relaxed text-muted">
+            All details below are editable placeholders — replace them in
+            <code class="text-primary">js/brunch.js</code> with the restaurant's verified information.
+          </p>
+
+          <div class="mt-7 grid gap-4 sm:grid-cols-2" data-brunch-details>
+            <p class="text-sm text-muted">Loading brunch details…</p>
+          </div>
+        </div>
+
+        <div class="reveal" data-reveal-delay="100">
+          <p class="eyebrow">Questions</p>
+          <h2 class="section-title mt-4">Brunch FAQ</h2>
+
+          <div class="mt-7 space-y-3" data-faq="single" data-brunch-faq>
+            <p class="text-sm text-muted">Loading frequently asked questions…</p>
+          </div>
+
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="contact.html" class="btn-ghost">Ask us a question</a>
+            <a href="contact.html?dining=weekend-brunch#reservation" data-brunch-cta class="btn-outline">
+              Reserve your brunch table
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== SECTION 6 — CTA ============================== -->
+    <section class="relative overflow-hidden bg-primary text-cream" aria-labelledby="brunch-cta-title">
+      <img src="images/decorative/cloud-scroll.svg" alt="" aria-hidden="true"
+           class="pointer-events-none absolute inset-x-0 top-6 w-full opacity-25 select-none" />
+      <div class="absolute inset-0 pattern-dots opacity-25" aria-hidden="true"></div>
+
+      <div class="container-site relative py-16 text-center md:py-20">
+        <p class="eyebrow is-centered text-gold">Saturday &amp; Sunday tables</p>
+        <h2 id="brunch-cta-title" class="mx-auto mt-5 max-w-3xl font-display text-3xl leading-tight text-cream sm:text-4xl lg:text-[2.9rem]">
+          Weekends Are Better Around the Table.
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-cream/85">
+          Tell us when you are coming and how many chairs you need — we will have the baskets steaming.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="contact.html?dining=weekend-brunch#reservation" data-brunch-cta class="btn-gold">
+            Reserve Your Brunch Table
+          </a>
+          <a href="menu.html" class="btn border border-cream/50 text-cream hover:bg-cream hover:text-primary">
+            Explore the Menu
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/navbar.js" defer></script>
+  <script src="js/footer.js" defer></script>
+  <script src="js/brunch.js" defer></script>
+</body>
+</html>

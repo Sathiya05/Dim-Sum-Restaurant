@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login | Golden Steam Dim Sum House</title>
+  <meta name="description" content="Sign in to your Golden Steam Dim Sum House member account — a demo sign-in page for saving favourites and managing reservations." />
+  <meta name="theme-color" content="#FFFCF7" />
+  <link rel="icon" href="images/logo/golden-steam-logo.svg" type="image/svg+xml" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("gs-theme");
+        var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (dark) document.documentElement.classList.add("dark");
+        if (localStorage.getItem("gs-rtl") === "rtl") document.documentElement.dir = "rtl";
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="flex min-h-screen flex-col">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+
+  <!-- Theme + RTL toggles pinned to the top-right corner. This page has no
+       navbar, so the toggles are the only fixed controls and stay visible at
+       every breakpoint. -->
+  <div class="fixed end-4 top-4 z-50 flex gap-1 rounded-full border border-line/70 bg-surface/85 p-1 shadow-soft backdrop-blur-md">
+    <button type="button" data-theme-toggle class="icon-btn h-10 w-10" aria-label="Switch to dark mode" aria-pressed="false">
+      <span data-theme-icon class="flex h-5 w-5 items-center justify-center"></span>
+    </button>
+    <button type="button" data-rtl-toggle class="icon-btn h-10 w-10" aria-label="Switch to right-to-left layout" aria-pressed="false">
+      <span data-rtl-icon class="flex h-5 w-5 items-center justify-center"></span>
+    </button>
+  </div>
+
+  <main id="main" class="flex-1">
+
+
+
+    <!-- ====================== SECTION 2 — LOGIN FORM ====================== -->
+    <section class="section bg-page pt-20" aria-labelledby="login-form-title">
+      <div class="container-site grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <!-- Form (the only side shown on mobile / small tablets) -->
+        <div class="reveal">
+          <div class="card p-6 shadow-lift sm:p-8">
+            <!-- Brand lockup (logo + wordmark) + centred sign-in headings.
+                 The logo links back to the home page. -->
+            <div class="text-center">
+              <div class="flex justify-center">
+                <a href="index.html" aria-label="Golden Steam Dim Sum House — go to home page"
+                   class="group flex items-center gap-3 rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold/50 focus-visible:ring-offset-2 focus-visible:ring-offset-card">
+                  <img src="images/logo/golden-steam-logo.svg" alt="Golden Steam Dim Sum House logo"
+                       width="72" height="72"
+                       class="h-16 w-16 shrink-0 transition-transform duration-300 group-hover:scale-105 sm:h-[4.5rem] sm:w-[4.5rem]" />
+                  <span class="flex flex-col text-start leading-tight">
+                    <span class="font-display text-xl font-bold tracking-tight text-ink transition-colors duration-300 group-hover:text-accent sm:text-2xl">Golden Steam</span>
+                    <span class="text-[0.62rem] font-semibold uppercase tracking-[0.3em] text-gold sm:text-[0.68rem]">Dim Sum House</span>
+                  </span>
+                </a>
+              </div>
+              <p class="eyebrow mt-6">Sign In</p>
+              <h2 id="login-form-title" class="section-title mt-4">Login to Your Account</h2>
+              <p class="mx-auto mt-4 max-w-md leading-relaxed text-muted">
+                Enter the email and password you would use for your member account.
+              </p>
+            </div>
+
+            <form data-login-form novalidate class="mt-8 space-y-5">
+              <div data-form-summary class="hidden rounded-xl border border-primary/40 bg-tintred px-4 py-3 text-sm text-ink" role="alert"></div>
+
+              <!-- Email -->
+              <div data-field class="field">
+                <label for="login-email" class="field-label">Email Address <span class="text-primary">*</span></label>
+                <input id="login-email" name="email" type="email" class="field-input" placeholder="you@example.com"
+                       autocomplete="email" required />
+                <p class="field-error">Please enter a valid email address.</p>
+              </div>
+
+              <!-- Password -->
+              <div data-field class="field">
+                <label for="login-password" class="field-label">Password <span class="text-primary">*</span></label>
+                <div class="relative">
+                  <input id="login-password" name="password" type="password" class="field-input pe-20"
+                         placeholder="Your password" autocomplete="current-password" minlength="6" required />
+                  <button type="button" data-password-toggle aria-controls="login-password"
+                          class="absolute end-2 top-1/2 -translate-y-1/2 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-primary transition hover:bg-tintred">
+                    Show
+                  </button>
+                </div>
+                <p class="field-error">Please enter your password (at least 6 characters).</p>
+              </div>
+
+              <!-- Remember / forgot -->
+              <div class="flex flex-wrap items-center justify-between gap-3">
+                <label for="login-remember" class="flex cursor-pointer items-center gap-2 text-sm text-muted">
+                  <input id="login-remember" name="remember" type="checkbox"
+                         class="h-4 w-4 rounded border-line accent-primary" />
+                  Remember me 
+                </label>
+                <button type="button" data-forgot class="text-sm font-semibold text-primary transition hover:underline">
+                  Forgot password?
+                </button>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit" data-submit class="btn-primary w-full">
+                <span data-spinner class="hidden h-4 w-4 animate-spin rounded-full border-2 border-cream/40 border-t-cream"></span>
+                <span data-submit-label>Sign In</span>
+              </button>
+
+            </form>
+
+            <div data-login-success class="hidden" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <!-- Editorial side panel — hidden below lg so mobile / small tablets
+             show only the left sign-in card -->
+        <div class="reveal hidden lg:block" data-reveal-delay="120">
+          <div class="img-frame aspect-[4/3] shadow-lift sm:aspect-[16/11]">
+            <img src="images/interior/interior-tea-counter.jpg" loading="lazy"
+                 alt="Tea counter inside the restaurant with warm lighting and neatly arranged teaware"
+                 width="1600" height="1100" class="media-cover" />
+          </div>
+
+          <div class="card mt-6 p-6">
+            <h3 class="font-display text-xl font-semibold">What a member account is for</h3>
+            <ul class="mt-4 space-y-3 text-sm leading-relaxed text-muted">
+              <li class="flex gap-3">
+                <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" aria-hidden="true"></span>
+                Keep a list of your favourite dim sum baskets for the next visit.
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" aria-hidden="true"></span>
+                Reach your reservation requests faster without retyping your details.
+              </li>
+              <li class="flex gap-3">
+                <span class="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" aria-hidden="true"></span>
+                Manage contact details and dining preferences in one place.
+              </li>
+            </ul>
+            <p class="mt-5 border-t border-line pt-4 text-[0.7rem] leading-relaxed text-muted">
+              Sample member features — edit this list in <code class="text-primary">login.html</code>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+   
+
+  </main>
+
+
+  <script src="js/main.js" defer></script>
+
+  <script src="js/login.js" defer></script>
+</body>
+</html>

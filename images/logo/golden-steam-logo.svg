@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Golden Steam Dim Sum House">
+  <g fill="none" stroke="#D4A64A" stroke-width="3" stroke-linecap="round" opacity="0.95">
+    <path d="M25.5 15.5c-3.2-2.8-3.2-6.6 0-9.5"/>
+    <path d="M32 13c-3.2-2.8-3.2-6.6 0-9.5"/>
+    <path d="M38.5 15.5c-3.2-2.8-3.2-6.6 0-9.5"/>
+  </g>
+  <path d="M13 29h38l-3.4 21.5a5 5 0 0 1-5 4.5H21.4a5 5 0 0 1-5-4.5Z" fill="#9F2525"/>
+  <g stroke="#FFF5E6" stroke-width="2" stroke-linecap="round" opacity="0.55">
+    <path d="M17.5 36h29"/>
+    <path d="M18.5 43.5h27"/>
+    <path d="M19.5 51h25"/>
+  </g>
+  <rect x="8.5" y="21.5" width="47" height="9" rx="4.5" fill="#D4A64A"/>
+  <rect x="8.5" y="21.5" width="47" height="9" rx="4.5" fill="none" stroke="#9F2525" stroke-width="1.4" opacity="0.55"/>
+  <circle cx="32" cy="26" r="2.1" fill="#9F2525"/>
+</svg>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu | Golden Steam Dim Sum House</title>
+  <meta name="description" content="Explore our world of dim sum — signature baskets, steamed dumplings, crispy fried favourites and traditional desserts, with filtering and search." />
+  <meta name="theme-color" content="#FFFCF7" />
+  <link rel="icon" href="images/logo/golden-steam-logo.svg" type="image/svg+xml" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("gs-theme");
+        var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (dark) document.documentElement.classList.add("dark");
+        if (localStorage.getItem("gs-rtl") === "rtl") document.documentElement.dir = "rtl";
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="flex min-h-screen flex-col">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <div id="navbar"></div>
+
+  <main id="main" class="flex-1">
+
+    <!-- ============================== SECTION 1 — MENU HERO ============================== -->
+    <section class="hero-banner relative isolate overflow-hidden" aria-labelledby="menu-title">
+      <img src="images/hero/hero-dim-sum-basket.jpg" fetchpriority="high"
+           alt="Open bamboo basket filled with freshly steamed dim sum"
+           width="1920" height="1080" class="absolute inset-0 -z-10 h-full w-full object-cover" />
+      <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#211815]/60 via-[#211815]/40 to-[#211815]/70" aria-hidden="true"></div>
+
+      <div class="container-site py-20 text-center sm:py-24">
+        <p class="eyebrow is-centered text-gold">Our Menu</p>
+        <h1 id="menu-title" class="hero-copy-shadow mx-auto mt-5 max-w-3xl font-display text-[2.4rem] leading-[1.07] text-cream sm:text-5xl lg:text-[3.4rem]">
+          Explore Our World of Dim Sum.
+        </h1>
+        <p class="hero-copy-shadow mx-auto mt-5 max-w-2xl text-base leading-relaxed text-cream/90 sm:text-lg">
+          Steamed baskets, golden fried favourites and traditional sweets — filter by category or search
+          for exactly what you are craving. Every dish below is handcrafted in small batches.
+        </p>
+        <div class="mt-7 flex justify-center">
+          <span class="chip-note border-cream/30 bg-cream/10 text-cream/90">
+            <span class="chinese-deco text-sm text-gold" aria-hidden="true">點心</span>
+            Sample menu · prices editable in js/menu.js
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== FILTER + SEARCH TOOLBAR ====================== -->
+    <div class="sticky top-[4.75rem] z-30 -mt-8 lg:top-[5.25rem]">
+      <div class="container-site">
+        <div class="card p-4 shadow-lift sm:p-5">
+          <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <!-- category chips (horizontally scrollable on small screens) -->
+            <div class="strip-scroll -mx-1 flex gap-2 overflow-x-auto px-1 pb-1" data-menu-filters
+                 role="group" aria-label="Filter menu by category"></div>
+
+            <!-- search -->
+            <div class="relative flex w-full items-center gap-2 lg:w-72">
+              <span class="pointer-events-none absolute start-3 text-muted" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+              </span>
+              <label for="menu-search" class="sr-only">Search menu dishes</label>
+              <input id="menu-search" type="search" data-menu-search placeholder="Search dishes…"
+                     autocomplete="off"
+                     class="field-input ps-9 pe-9" />
+              <button type="button" data-menu-clear aria-label="Clear search"
+                      class="absolute end-2 flex h-7 w-7 items-center justify-center rounded-full text-muted transition hover:bg-tintgold hover:text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="mt-3 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-3">
+            <p class="text-xs text-muted" data-results-count aria-live="polite"></p>
+            <p class="text-[0.7rem] text-muted">
+              Dietary labels are sample content, not verified allergen information.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- empty state -->
+    <div class="container-site mt-8">
+      <div data-menu-empty class="card hidden p-10 text-center">
+        <p class="font-display text-xl text-ink">No dishes match your search</p>
+        <p class="mt-2 text-sm text-muted">Try a different keyword, or reset the filters to see the full menu.</p>
+        <button type="button" data-menu-reset class="btn-primary mt-5">Show the whole menu</button>
+      </div>
+    </div>
+
+    <!-- ============================== SECTION 2 — SIGNATURE BASKETS ============================== -->
+    <section id="signature-baskets" data-menu-section="signature"
+             class="section scroll-mt-40 bg-page" aria-labelledby="menu-signature-title">
+      <div class="container-site">
+        <div class="section-head is-centered reveal">
+          <p class="eyebrow is-centered">Signature Baskets</p>
+          <h2 id="menu-signature-title" class="section-title mt-4">Signature Combinations</h2>
+          <p class="section-lead">
+            House combinations built for sharing — the quickest way to taste a little of everything.
+          </p>
+          <p class="mt-4 text-xs text-muted">
+            <span data-section-count></span> · Prices are <strong>editable sample prices</strong>
+            (<code class="text-primary">js/menu.js</code>).
+          </p>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-item-grid></div>
+      </div>
+    </section>
+
+    <!-- ============================== SECTION 3 — STEAMED ============================== -->
+    <section id="steamed" data-menu-section="steamed"
+             class="section scroll-mt-40 bg-surface" aria-labelledby="menu-steamed-title">
+      <div class="container-site">
+        <div class="section-head is-centered reveal">
+          <p class="eyebrow is-centered">From the Steamer</p>
+          <h2 id="menu-steamed-title" class="section-title mt-4">Steamed Dim Sum</h2>
+          <p class="section-lead">
+            Delicate wrappers, juicy fillings and soft buns — cooked in bamboo and served the moment they
+            are ready.
+          </p>
+          <p class="mt-4 text-xs text-muted">
+            <span data-section-count></span> · Sample prices, editable in <code class="text-primary">js/menu.js</code>.
+          </p>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-item-grid></div>
+      </div>
+    </section>
+
+    <!-- ============================== SECTION 4 — FRIED ============================== -->
+    <section id="fried" data-menu-section="fried"
+             class="section scroll-mt-40 bg-page" aria-labelledby="menu-fried-title">
+      <div class="container-site">
+        <div class="section-head is-centered reveal">
+          <p class="eyebrow is-centered">Golden &amp; Crisp</p>
+          <h2 id="menu-fried-title" class="section-title mt-4">Fried Dim Sum</h2>
+          <p class="section-lead">
+            Crunchy companions to your tea — spring rolls, wontons, sesame balls and crisp-bottomed
+            dumplings fried to order.
+          </p>
+          <p class="mt-4 text-xs text-muted">
+            <span data-section-count></span> · Sample prices, editable in <code class="text-primary">js/menu.js</code>.
+          </p>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-item-grid></div>
+      </div>
+    </section>
+
+    <!-- ============================== SECTION 5 — DESSERTS ============================== -->
+    <section id="desserts" data-menu-section="desserts"
+             class="section-tint section scroll-mt-40" aria-labelledby="menu-desserts-title">
+      <div class="container-site">
+        <div class="section-head is-centered reveal">
+          <p class="eyebrow is-centered">A Sweet Finish</p>
+          <h2 id="menu-desserts-title" class="section-title mt-4">Dim Sum Desserts</h2>
+          <p class="section-lead">
+            Light, familiar sweets to close the meal — mango pudding, egg tarts, red bean buns and more.
+          </p>
+          <p class="mt-4 text-xs text-muted">
+            <span data-section-count></span> · Sample prices, editable in <code class="text-primary">js/menu.js</code>.
+          </p>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-item-grid></div>
+      </div>
+    </section>
+
+    <!-- ============================== SECTION 6 — CTA ============================== -->
+    <section class="relative overflow-hidden bg-primary text-cream" aria-labelledby="menu-cta-title">
+      <img src="images/decorative/cloud-scroll.svg" alt="" aria-hidden="true"
+           class="pointer-events-none absolute inset-x-0 top-6 w-full opacity-25 select-none" />
+      <div class="absolute inset-0 pattern-dots opacity-25" aria-hidden="true"></div>
+
+      <div class="container-site relative py-16 text-center md:py-20">
+        <p class="eyebrow is-centered text-gold">Hungry yet?</p>
+        <h2 id="menu-cta-title" class="mx-auto mt-5 max-w-3xl font-display text-3xl leading-tight text-cream sm:text-4xl lg:text-[2.9rem]">
+          Found Your Favorite? Come Taste It Fresh.
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-cream/85">
+          Reserve a table and we will have the steamer baskets arriving hot, basket after basket.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="contact.html#reservation" class="btn-gold">Reserve a Table</a>
+          <a href="weekend-brunch.html" class="btn border border-cream/50 text-cream hover:bg-cream hover:text-primary">Weekend Brunch</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/navbar.js" defer></script>
+  <script src="js/footer.js" defer></script>
+  <script src="js/menu.js" defer></script>
+</body>
+</html>

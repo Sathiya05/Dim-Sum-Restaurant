@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | Golden Steam Dim Sum House</title>
+  <meta name="description" content="Our story, food philosophy, kitchen craft and dining experience — how Golden Steam Dim Sum House brings people together, one basket at a time." />
+  <meta name="theme-color" content="#FFFCF7" />
+  <link rel="icon" href="images/logo/golden-steam-logo.svg" type="image/svg+xml" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("gs-theme");
+        var dark = t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (dark) document.documentElement.classList.add("dark");
+        if (localStorage.getItem("gs-rtl") === "rtl") document.documentElement.dir = "rtl";
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="flex min-h-screen flex-col">
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <div id="navbar"></div>
+
+  <main id="main" class="flex-1">
+
+    <!-- ============================== SECTION 1 — HERO ============================== -->
+    <section class="hero-banner relative isolate flex overflow-hidden" aria-labelledby="about-title">
+      <img src="images/interior/interior-tea-counter.jpg" fetchpriority="high"
+           alt="Bright restaurant tea counter with warm wood and table settings"
+           width="1400" height="1050" class="absolute inset-0 -z-10 h-full w-full object-cover" />
+      <div class="absolute inset-0 -z-10 bg-gradient-to-b from-[#211815]/60 via-[#211815]/40 to-[#211815]/70" aria-hidden="true"></div>
+
+      <div class="container-site py-20">
+        <div class="mx-auto max-w-3xl text-center reveal">
+          <span class="hero-badge bg-[#FFFCF7]/90">About Golden Steam</span>
+          <h1 id="about-title" class="hero-copy-shadow mt-6 font-display text-[2.4rem] leading-[1.07] text-cream sm:text-5xl lg:text-[3.4rem]">
+            Bringing People Together, One Basket at a Time.
+          </h1>
+          <p class="hero-copy-shadow mx-auto mt-5 max-w-2xl text-base leading-relaxed text-cream/90 sm:text-lg">
+            A neighbourhood dim sum house built around handcrafted food, warm service and tables that
+            are always better with company.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== SECTION 2 — OUR STORY ============================== -->
+    <section class="section bg-surface" aria-labelledby="about-story-title">
+      <div class="container-site grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="reveal">
+          <p class="eyebrow">Our Story</p>
+          <h2 id="about-story-title" class="section-title mt-4">Food Made by Hand, Served With Warmth</h2>
+          <p class="mt-5 leading-relaxed text-muted">
+            <!-- Editable restaurant story — replace with the restaurant's own words -->
+            Golden Steam Dim Sum House began with a simple idea: that the best meals are the ones you
+            share. Dim sum has always been a social way of eating — many small dishes, one table, and
+            plenty of time to talk between baskets.
+          </p>
+          <p class="mt-4 leading-relaxed text-muted">
+            Our kitchen prepares dumplings, buns and classic sides the traditional way: dough rested and
+            rolled thin, fillings mixed in small batches, and everything folded by hand while service is
+            running. We keep the menu focused so every basket that leaves the kitchen is one we are proud
+            to put on your table.
+          </p>
+          <p class="mt-4 leading-relaxed text-muted">
+            Whether it is your first dim sum or your fiftieth, our team is happy to explain the dishes,
+            suggest pairings and help you order the way you like to eat.
+          </p>
+
+          <div class="mt-7 flex flex-wrap gap-3">
+            <span class="chip-note">Handmade daily</span>
+            <span class="chip-note">Small-batch fillings</span>
+            <span class="chip-note">Bamboo steamed</span>
+          </div>
+        </div>
+
+        <div class="relative reveal" data-reveal-delay="100">
+          <div class="img-frame aspect-[4/3] shadow-lift">
+            <img src="images/restaurant/restaurant-ambience.jpg" loading="lazy"
+                 alt="Warm restaurant dining room with set tables ready for guests"
+                 width="1400" height="1050" class="media-cover" />
+          </div>
+          <div class="card absolute -bottom-7 start-4 p-5 sm:start-8">
+            <span class="chinese-deco text-2xl text-gold" aria-hidden="true">心</span>
+            <p class="mt-1 font-display text-base font-semibold text-ink">Made for sharing</p>
+            <p class="text-[0.68rem] uppercase tracking-[0.16em] text-muted">Since day one</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== SECTION 3 — OUR FOOD PHILOSOPHY ====================== -->
+    <section class="section-tint section" aria-labelledby="philosophy-title">
+      <div class="container-site">
+        <div class="section-head is-centered reveal">
+          <p class="eyebrow is-centered">Our Food Philosophy</p>
+          <h2 id="philosophy-title" class="section-title mt-4">Five Things We Never Rush</h2>
+          <p class="section-lead">
+            Simple principles that decide how we shop, prep, cook and serve every day.
+          </p>
+        </div>
+
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="card card-hover p-6 reveal">
+            <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-tintgold text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            </span>
+            <h3 class="mt-4 font-display text-lg">Fresh Ingredients</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Produce, aromatics and fillings chosen for flavour and prepared in small, frequent batches.</p>
+          </article>
+
+          <article class="card card-hover p-6 reveal" data-reveal-delay="70">
+            <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-tintgold text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>
+            </span>
+            <h3 class="mt-4 font-display text-lg">Handmade Preparation</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Wrappers rolled, pleats closed and buns shaped by hand — imperfection is part of the charm.</p>
+          </article>
+
+          <article class="card card-hover p-6 reveal" data-reveal-delay="140">
+            <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-tintgold text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </span>
+            <h3 class="mt-4 font-display text-lg">Traditional Flavours</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Familiar seasoning and classic combinations, kept honest rather than over-complicated.</p>
+          </article>
+
+          <article class="card card-hover p-6 reveal">
+            <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-tintgold text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M12 2s4 4 4 8a4 4 0 0 1-8 0c0-1.5.7-2.8 1.5-3.8"/><path d="M5 22c0-4 3-7 7-7s7 3 7 7"/></svg>
+            </span>
+            <h3 class="mt-4 font-display text-lg">Careful Cooking</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Steam timing matters — baskets go out when they are ready, not when they are convenient.</p>
+          </article>
+
+          <article class="card card-hover p-6 reveal" data-reveal-delay="70">
+            <span class="flex h-11 w-11 items-center justify-center rounded-xl bg-tintgold text-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            </span>
+            <h3 class="mt-4 font-display text-lg">Quality &amp; Consistency</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">The har gow you order tonight should taste like the one you loved last month.</p>
+          </article>
+
+          <article class="card card-hover p-6 reveal border-gold/60 bg-tintgold/50" data-reveal-delay="140">
+            <span class="chinese-deco text-2xl text-gold" aria-hidden="true">鮮</span>
+            <h3 class="mt-3 font-display text-lg">A Note on Menu Content</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">
+              Dish descriptions, dietary labels and prices on this website are editable sample content and
+              are not verified allergen declarations.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== SECTION 4 — OUR KITCHEN ============================== -->
+    <section class="section bg-surface" aria-labelledby="kitchen-about-title">
+      <div class="container-site">
+        <div class="section-head is-centered reveal">
+          <p class="eyebrow is-centered">Our Kitchen</p>
+          <h2 id="kitchen-about-title" class="section-title mt-4">From Prep Bench to Steaming Basket</h2>
+          <p class="section-lead">
+            Four steps that repeat all day long — and the reason every basket arrives hot.
+          </p>
+        </div>
+
+        <ol class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="card card-hover overflow-hidden reveal">
+            <div class="aspect-[4/3] overflow-hidden bg-tintgold">
+              <img src="images/chefs/chef-preparing-dumplings.jpg" loading="lazy"
+                   alt="Chef folding and shaping dumplings at the prep bench"
+                   width="800" height="600" class="media-cover" />
+            </div>
+            <div class="p-5">
+              <p class="text-[0.66rem] font-semibold uppercase tracking-[0.2em] text-gold">Step 01</p>
+              <h3 class="mt-1 font-display text-lg">Dumpling Making</h3>
+              <p class="mt-2 text-sm text-muted">Wrappers rolled thin and filled in small batches through the day.</p>
+            </div>
+          </li>
+
+          <li class="card card-hover overflow-hidden reveal" data-reveal-delay="70">
+            <div class="aspect-[4/3] overflow-hidden bg-tintgold">
+              <img src="images/chefs/dough-preparation.jpg" loading="lazy"
+                   alt="Preparing dough and fillings on a floured kitchen bench"
+                   width="800" height="600" class="media-cover" />
+            </div>
+            <div class="p-5">
+              <p class="text-[0.66rem] font-semibold uppercase tracking-[0.2em] text-gold">Step 02</p>
+              <h3 class="mt-1 font-display text-lg">Filling Preparation</h3>
+              <p class="mt-2 text-sm text-muted">Seasoned, mixed and rested so the flavour holds up to steaming.</p>
+            </div>
+          </li>
+
+          <li class="card card-hover overflow-hidden reveal" data-reveal-delay="140">
+            <div class="aspect-[4/3] overflow-hidden bg-tintgold">
+              <img src="images/steamed/bamboo-steamer-stacks.jpg" loading="lazy"
+                   alt="Bamboo steamer baskets stacked over boiling water"
+                   width="800" height="600" class="media-cover" />
+            </div>
+            <div class="p-5">
+              <p class="text-[0.66rem] font-semibold uppercase tracking-[0.2em] text-gold">Step 03</p>
+              <h3 class="mt-1 font-display text-lg">Steaming</h3>
+              <p class="mt-2 text-sm text-muted">Baskets stacked over rolling steam and timed by eye and experience.</p>
+            </div>
+          </li>
+
+          <li class="card card-hover overflow-hidden reveal" data-reveal-delay="210">
+            <div class="aspect-[4/3] overflow-hidden bg-tintgold">
+              <img src="images/signature-baskets/chefs-special.jpg" loading="lazy"
+                   alt="Finished dim sum platter presented ready to serve"
+                   width="800" height="600" class="media-cover" />
+            </div>
+            <div class="p-5">
+              <p class="text-[0.66rem] font-semibold uppercase tracking-[0.2em] text-gold">Step 04</p>
+              <h3 class="mt-1 font-display text-lg">Plating &amp; Serving</h3>
+              <p class="mt-2 text-sm text-muted">Straight from steamer to table, with tea poured alongside.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ====================== SECTION 5 — OUR DINING EXPERIENCE ====================== -->
+    <section class="section bg-page" aria-labelledby="dining-title">
+      <div class="container-site grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div class="grid grid-cols-2 gap-4 reveal">
+          <figure class="img-frame aspect-[3/4] shadow-soft">
+            <img src="images/interior/interior-lounge.jpg" loading="lazy"
+                 alt="Cosy restaurant seating area with warm lighting"
+                 width="800" height="1067" class="media-cover" />
+          </figure>
+          <figure class="img-frame mt-6 aspect-[3/4] shadow-soft">
+            <img src="images/restaurant/table-arrangement.jpg" loading="lazy"
+                 alt="Restaurant table arranged with tableware and tea settings"
+                 width="800" height="1067" class="media-cover" />
+          </figure>
+        </div>
+
+        <div class="reveal" data-reveal-delay="100">
+          <p class="eyebrow">Our Dining Experience</p>
+          <h2 id="dining-title" class="section-title mt-4">A Room That Fits Every Kind of Table</h2>
+          <p class="mt-5 leading-relaxed text-muted">
+            Dim sum works for almost any occasion — that is part of its appeal. Our dining room is set up
+            for easy conversation and comfortable, unhurried meals.
+          </p>
+
+          <ul class="mt-7 space-y-4">
+            <li class="flex items-start gap-4">
+              <span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-tintred text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>
+              </span>
+              <div>
+                <p class="font-display text-base font-semibold text-ink">Family gatherings</p>
+                <p class="text-sm text-muted">Tables sized for grandparents, kids and everyone in between.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-tintred text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              </span>
+              <div>
+                <p class="font-display text-base font-semibold text-ink">Friendly atmosphere</p>
+                <p class="text-sm text-muted">Relaxed service with time to explain dishes and make recommendations.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-tintred text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true"><path d="M3 7v11a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7"/><path d="M3 10h18M7 4v4M17 4v4"/></svg>
+              </span>
+              <div>
+                <p class="font-display text-base font-semibold text-ink">Comfortable seating</p>
+                <p class="text-sm text-muted">Room to settle in for a long brunch or a quick midday basket.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-tintred text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true"><path d="M12 2v6M5 8h14l-1.5 12a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2Z"/></svg>
+              </span>
+              <div>
+                <p class="font-display text-base font-semibold text-ink">Shared dining</p>
+                <p class="text-sm text-muted">Plates made for the middle of the table, not just one person.</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-tintred text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              </span>
+              <div>
+                <p class="font-display text-base font-semibold text-ink">Weekend experiences</p>
+                <p class="text-sm text-muted">A dedicated brunch rhythm when the weekend slows everything down.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== SECTION 6 — CTA ============================== -->
+    <section class="relative overflow-hidden bg-primary text-cream" aria-labelledby="about-cta-title">
+      <img src="images/decorative/cloud-scroll.svg" alt="" aria-hidden="true"
+           class="pointer-events-none absolute inset-x-0 top-6 w-full opacity-25 select-none" />
+      <div class="absolute inset-0 pattern-dots opacity-25" aria-hidden="true"></div>
+
+      <div class="container-site relative py-16 text-center md:py-20">
+        <p class="eyebrow is-centered text-gold">We saved you a seat</p>
+        <h2 id="about-cta-title" class="mx-auto mt-5 max-w-3xl font-display text-3xl leading-tight text-cream sm:text-4xl lg:text-[2.9rem]">
+          Come Share a Little Tradition With Us.
+        </h2>
+        <p class="mx-auto mt-4 max-w-2xl text-cream/85">
+          Browse the menu, pick your favourites and let us take care of the steamer.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="menu.html" class="btn-gold">Explore Our Menu</a>
+          <a href="contact.html#reservation" class="btn border border-cream/50 text-cream hover:bg-cream hover:text-primary">Reserve a Table</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/navbar.js" defer></script>
+  <script src="js/footer.js" defer></script>
+</body>
+</html>
