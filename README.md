@@ -36,13 +36,14 @@ category-filtered menu, weekend brunch content and a validated demo reservation 
   heroes render at exactly the same height (44rem) on every breakpoint. Heroes without a photo centre
   their content both vertically and horizontally.
 - **Demo login page** (`login.html` + `js/login.js`) — client-side validation, password show/hide,
-  loading state and a clearly-marked demo success panel. The sign-in card carries a centred logo and
-  headings, and a theme + RTL toggle pill sits pinned to the top-right page corner below 1024px
-  (on desktop the navbar already provides them). The editorial side panel is hidden on phones and
-  small tablets, where only the sign-in card is shown. It is **not** a real authentication system:
-  nothing is sent, stored or verified.
-- **Hamburger-only navigation below 1024px** — tablets (768px / 820px) and phones show *only* the
-  logo and hamburger icon; every link, control and CTA lives inside the full-height drawer.
+  loading state and a clearly-marked demo success panel. The page intentionally has **no navbar**:
+  the sign-in card carries the centred logo + wordmark lockup (which links back to `index.html`) and
+  headings, while a floating theme + RTL toggle pill stays pinned to the top-right corner at every
+  breakpoint. The editorial side panel is hidden on phones and small tablets, where only the sign-in
+  card is shown. It is **not** a real authentication system: nothing is sent, stored or verified.
+- **Hamburger-only navigation below 1040px** — tablets (768px / 1024px / 1032px) and phones show
+  *only* the logo and hamburger icon; every link, control and CTA lives inside the full-height
+  drawer. The hamburger morphs into a cross (X) while the drawer is open.
 - **Home dropdown** (desktop) with smooth animation, keyboard support and active states.
 - **Theme toggle** (sun/moon) with `localStorage` persistence and system-theme detection.
 - **RTL toggle** — flips `document.dir`, persists per page, uses CSS logical properties throughout.
@@ -100,7 +101,10 @@ golden-steam-dim-sum/
 │   └── fonts/                 # .woff2 files + fonts.txt reference
 │
 ├── package.json
+├── package-lock.json
 ├── tailwind.config.js
+├── vercel.json                 # Static deploy config (no install / no build on Vercel)
+├── .gitignore                  # node_modules, .vercel, logs, OS files
 └── README.md
 ```
 
@@ -154,6 +158,33 @@ Then open <http://localhost:4173/index.html>.
 
 Opening the files directly with `file://` also works (no fetch/XHR is used anywhere), although a
 local server is recommended so relative paths behave exactly like production.
+
+### Deploying to Vercel
+
+The site is **fully static** and `css/style.css` is committed, so Vercel does not need to install or
+build anything. `vercel.json` sets:
+
+```json
+{
+  "framework": null,
+  "installCommand": "",
+  "buildCommand": "",
+  "outputDirectory": "."
+}
+```
+
+- `framework: null` → Vercel treats the project as "Other" (static).
+- `installCommand: ""` and `buildCommand: ""` → the install and build steps are skipped.
+- `outputDirectory: "."` → the repository root is served as-is.
+
+`node_modules/` is intentionally **not** committed (see `.gitignore`); it only exists on a machine
+where you run the Tailwind build locally. If you prefer Vercel to compile Tailwind on every deploy
+instead, delete the empty `installCommand` / `buildCommand` entries and commit the rebuilt
+`css/style.css` locally first (run `npm run build` and push it).
+
+> After changing `css/input.css`, `tailwind.config.js` or adding new Tailwind class names, always
+> run `npm run build` locally and commit the regenerated `css/style.css` — that file is what gets
+> served in production.
 
 ---
 
@@ -330,8 +361,9 @@ To accept real bookings:
 - [x] Nav order Home → About → Menu → Weekend Brunch → Contact; Login button sits directly
       before *Reserve a Table* in the desktop bar and the mobile drawer
 - [x] All page heroes share one equal height (`.hero-banner`); photo-less heroes centre content
-- [x] Desktop navbar (≥1024px): brand, centre links, Home dropdown, theme + RTL toggles, CTA
-- [x] Tablet & mobile (<1024px): **only** brand + hamburger; everything else inside the drawer
+- [x] Desktop navbar (≥1040px): brand, centre links, Home dropdown, theme + RTL toggles, CTA
+- [x] Tablet & mobile (<1040px): **only** brand + hamburger; everything else inside the drawer
+- [x] Hamburger turns into a cross (X) while the drawer is open
 - [x] Drawer: open/close animation, outside click, Escape, scroll lock, focus trap, link close
 - [x] Theme toggle + RTL toggle persist across all pages (`localStorage`)
 - [x] Menu category filter, search, empty state and item detail modal

@@ -1,0 +1,18 @@
+# Dependencies — installed locally only (never committed)
+node_modules/
+
+# Vercel local metadata
+.vercel/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
